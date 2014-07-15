@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=0.2
+Name=Warung Aplikasi
+Comment=Warung Aplikasi BlankOn
+GenericName=Warung Aplikasi
+Exec=maleo /usr/share/warsi
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=warsi
+Categories=Utilities;
+StartupWMClass=Maleo
+StartupNotify=true
+

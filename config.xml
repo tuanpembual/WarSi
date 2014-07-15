@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/n$
+    <icon src="icon_128.png"/>
+    <content src="index.html"/>
+<name>hangonman</name>
+<tizen:application id="nrT4AQuzWO" required_version="1.0"/>
+<tizen:setting screen-orientation="landscape" contextmenu="enable"/>
+</widget-->
+
+<widget xmlns       = "http://www.w3.org/ns/widgets"
+        id          = ""
+        version     = "git"
+        height      = "800"
+        width       = "1200">
+
+  <name short="warsi">
+    Warung Aplikasi
+  </name>
+
