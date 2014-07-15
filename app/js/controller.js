@@ -7,10 +7,6 @@
 
 'use strict';
 
-function install0() {
-  (Apps.install0());
-}
-
 /* Controllers */
 
 var WarsiCtr = angular.module('WarsiCtr', ['WarsiJson','xeditable','ui.bootstrap']);
@@ -19,12 +15,17 @@ WarsiCtr.run(function(editableOptions) {
   editableOptions.theme = 'bs3'; // bootstrap3 theme. Can be also 'bs2', 'default'
 });
 
-WarsiCtr.controller('History', ['$scope',
-  function($scope) {
-    $scope.$back = function() {
-      window.history.back();
-    }
-}]);
+// WarsiCtr.controller('History', ['$scope',
+//   function($scope) {
+//     $scope.$back = function() {
+//       window.history.back();
+//     }
+// }]);
+
+WarsiCtr.controller('HomeCtr', ['$scope','breadcrumbs',
+ function($scope, breadcrumbs){
+  $scope.breadcrumbs = breadcrumbs;
+}])
 
 WarsiCtr.controller('AppListCtr', ['$scope', 'DaftarApp',
   function($scope, DaftarApp) {
