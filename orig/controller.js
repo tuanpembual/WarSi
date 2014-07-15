@@ -7,7 +7,7 @@
 
 'use strict';
 
-function install0() { 
+function install0() {
   (Apps.install0());
 }
 
@@ -21,7 +21,7 @@ WarsiCtr.run(function(editableOptions) {
 
 WarsiCtr.controller('History', ['$scope',
   function($scope) {
-    $scope.$back = function() { 
+    $scope.$back = function() {
       window.history.back();
     }
 }]);
@@ -48,6 +48,12 @@ WarsiCtr.controller('AppDetailCtr', ['$scope', '$routeParams','DaftarApp',
     });
     $scope.app = itemSelected;
     $scope.install = function(app){
+      alert(app)
+    }
+    $scope.remove = function(app){
+      alert(app)
+    }
+    $scope.upgrade = function(app){
       alert(app)
     }
     $scope.installapp = function(app){
@@ -112,7 +118,7 @@ WarsiCtr.controller('AppDetailCtr', ['$scope', '$routeParams','DaftarApp',
   }
 ]);
 
-WarsiCtr.controller('RepoCtr', 
+WarsiCtr.controller('RepoCtr',
   function($scope, $filter) {
   $scope.debhttps = [
     {
@@ -146,7 +152,7 @@ WarsiCtr.controller('RepoCtr',
     status: 'arsip'
   };
   //ini status akan dapat kiriman dari JSCore, but how?
-  
+
   $scope.$watch('user.status',function(newVal,oldVal){
     $scope.user.status=newVal;
     $scope.itemS = "";
@@ -159,14 +165,14 @@ WarsiCtr.controller('RepoCtr',
   $scope.statuses = [
     {value: 'arsip', text: 'Arsip BlankOn'},
     {value: 'kambing', text: 'Kambing UI'},
-    {value: 'repougm', text: 'Repo UGM'}]; 
+    {value: 'repougm', text: 'Repo UGM'}];
 
   $scope.showStatus = function() {
     var selected = $filter('filter')($scope.statuses, {value: $scope.user.status});
     return ($scope.user.status && selected.length) ? selected[0].text : 'Not set';
   };
   $scope.simpanrepo = function(app) {
-    
+
     if (app === "repougm") {
       (Apps.ugm())
     } else if (app ==="kambing"){

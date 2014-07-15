@@ -8,12 +8,23 @@
 </widget-->
 
 <widget xmlns       = "http://www.w3.org/ns/widgets"
-        id          = ""
+        id          = "WarSi"
         version     = "git"
         height      = "800"
         width       = "1200">
 
-  <name short="warsi">
+<name short="warsi">
     Warung Aplikasi
-  </name>
-
+</name>
+  <description>
+    Warung Aplikasi
+    -------------
+    Warung Aplikasi HTML5
+  </description>
+  <author href="#">Estu Fardani</author>
+  <icon src="favicon.ico"/>
+  <content src="index.html"/>
+  <license>
+    (c) MIT
+  </license>
+</widget>
